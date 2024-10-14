@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi Codes - Projects</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Inline styles for tabs */
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            margin: 0 5px;
+            background-color: #6c63ff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .tab-button.active {
+            background-color: #ff6584;
+        }
+
+        .tab-content {
+            display: none;
+            text-align: center;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>My Projects</h1>
+            <div class="tabs">
+                <button class="tab-button active" onclick="showTab('ml')">Machine Learning Projects</button>
+                <button class="tab-button" onclick="showTab('tableau')">Tableau Dashboards</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="projects">
+        <div class="container">
+
+            <div id="ml" class="tab-content active">
+                <h2>Machine Learning Projects</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <img src="images/airline_prediction.jpg" alt="Airline Customer Satisfaction Prediction">
+                        <h3>Airline Customer Satisfaction Prediction</h3>
+                        <p>This project focuses on predicting customer satisfaction within the airline industry by leveraging machine learning techniques. Using a comprehensive dataset that includes various customer feedback metrics, demographic information, and service quality indicators, the model aims to assess and predict overall satisfaction levels of airline passengers.</p>
+                        <B><a href="https://github.com/Sakshicodes17/airline-customer-satisfaction-" target="_blank">[View on GitHub]</a></B>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/video_games_prediction.jpg" alt="Video Games Sales Prediction">
+                        <h3>Video Games Sales Prediction</h3>
+                        <p>This project aims to predict video game sales using historical sales data and various game characteristics. By applying machine learning techniques, the model seeks to provide insights into the factors influencing sales performance, enabling stakeholders in the gaming industry to make informed decisions regarding game development, marketing strategies, and inventory management.</p>
+                    <B><a href="https://github.com/Sakshicodes17/vedio-games-sales-prediction" target="_blank">[View on GitHub]</a></B>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/stock_price_prediction.jpg" alt="Stock Price Prediction">
+                        <h3>Stock Price Prediction</h3>
+                        <p>This project focuses on predicting stock prices using historical market data and various financial indicators. By employing machine learning techniques and time series analysis, the model aims to forecast future stock prices, assisting investors and traders in making informed decisions based on market trends.</p>
+                        <B><a href="https://github.com/Sakshicodes17/stock-price-prediction" target="_blank">[View on GitHub]</a></B>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/wine_quality_prediction.jpg" alt="Wine Quality Prediction">
+                        <h3>Wine Quality Prediction</h3>
+                        <p>This project aims to build a predictive model that can estimate the quality of wines based on physicochemical features. The project utilizes machine learning techniques and statistical analysis to achieve this objective. </p>
+                        <B><a href="https://github.com/Sakshicodes17/wine-quality-prediction" target="_blank">[View on GitHub]</a></B>
+                    </div>
+                    <div class="project-card">
+                        <img src="images/addictoalert.jpg" alt="Addicto-Alert">
+                        <h3>Addicto Alert</h3>
+                        <p>his project explores the phenomenon of mobile phone addiction among engineering students, investigating its prevalence, causes, and effects on academic performance, social interactions, and mental health. By conducting surveys and analyzing data, the study aims to provide insights into how excessive smartphone use impacts students' lives and offers recommendations for fostering healthier technology habits. </p>
+                        <B><a href="https://github.com/Sakshicodes17/Addicto-Alert" target="_blank">[View on GitHub]</a></B>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="tableau" class="tab-content">
+                <h2>Tableau Dashboards</h2>
+                <div class="project-grid">
+                    <div class="project-card">
+                        <a href="https://public.tableau.com/app/profile/sakshi.agarwal4656/viz/HRAnalyticsDashboard_17271591886010/HRAnalyticsDashboard" target="_blank"> <img src="images/sales_dashboard.jpg" alt="Sales Dashboard">
+                        <h3>Sales Dashboard</h3> </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Sakshi Agarwal. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function showTab(tab) {
+            const tabs = document.querySelectorAll('.tab-content');
+            const buttons = document.querySelectorAll('.tab-button');
+            tabs.forEach(t => {
+                t.classList.remove('active');
+            });
+            buttons.forEach(b => {
+                b.classList.remove('active');
+            });
+            document.getElementById(tab).classList.add('active');
+            event.currentTarget.classList.add('active');
+        }
+    </script>
+</body>
+</html>
